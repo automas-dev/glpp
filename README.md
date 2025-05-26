@@ -5,7 +5,7 @@ Helper Classes that wrap OpenGL functionality.
 ## Building
 
 ```sh
-git clone https://github.com/twh2898/glpp.git
+git clone https://github.com/automas-dev/glpp.git
 cd glpp
 ./post-clone.sh
 make build
@@ -48,7 +48,7 @@ will be On.
 ## CMake Submodule
 
 ```sh
-git submodule add https://github.com/twh2898/glpp.git
+git submodule add https://github.com/automas-dev/glpp.git
 git submodule update --init --recursive
 ```
 
@@ -68,7 +68,7 @@ make install
 include(FetchContent)
 FetchContent_Declare(
     glpp
-    GIT_REPOSITORY https://github.com/twh2898/glpp.git
+    GIT_REPOSITORY https://github.com/automas-dev/glpp.git
     GIT_TAG        0.8.1
 )
 FetchContent_MakeAvailable(glpp)
@@ -80,7 +80,7 @@ FetchContent_MakeAvailable(glpp)
 include(ExternalProject)
 ExternalProject_Add(
     glpp
-    GIT_REPOSITORY  https://github.com/twh2898/glpp.git
+    GIT_REPOSITORY  https://github.com/automas-dev/glpp.git
     GIT_TAG         0.8.1
     UPDATE_COMMAND  ""
     INSTALL_COMMAND ""
