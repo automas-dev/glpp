@@ -161,9 +161,9 @@ namespace glpp {
     void FrameBuffer::blit(const FrameBuffer & source,
                            GLbitfield mask,
                            GLenum filter) const {
-        blit(source, //
+        blit(source,                             //
              0, 0, source.size.x, source.size.y, //
-             0, 0, size.x, size.y, //
+             0, 0, size.x, size.y,               //
              mask, filter);
     }
 

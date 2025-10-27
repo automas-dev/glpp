@@ -1,47 +1,47 @@
 ﻿---
+Language: Cpp
 BasedOnStyle: Google
-AccessModifierOffset: '-4'
+AccessModifierOffset: -4
 AlignEscapedNewlines: Left
-AlignTrailingComments: 'false'
-AllowAllArgumentsOnNextLine: 'false'
-AllowShortBlocksOnASingleLine: 'false'
+AlignTrailingComments: true
+AlignAfterOpenBracket: true
+AllowAllArgumentsOnNextLine: true
+AllowShortBlocksOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Empty
 AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: Empty
-AlwaysBreakTemplateDeclarations: 'Yes'
-BinPackArguments: 'true'
-BinPackParameters: 'false'
+AlwaysBreakTemplateDeclarations: "Yes"
+AlignArrayOfStructures: Left
+BinPackArguments: true
+BinPackParameters: false
 BraceWrapping:
-  AfterEnum: 'false'
-  BeforeCatch: 'true'
-  BeforeElse: 'true'
-  BeforeLambdaBody: 'false'
-  BeforeWhile: 'false'
+  AfterEnum: false
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: false
+  BeforeWhile: false
 BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeBraces: Custom
-BreakBeforeTernaryOperators: 'false'
+BreakBeforeTernaryOperators: false
 BreakConstructorInitializers: BeforeColon
 BreakInheritanceList: BeforeColon
-BreakStringLiterals: 'false'
-ColumnLimit: '80'
-DerivePointerAlignment: 'false'
+BreakStringLiterals: false
+ColumnLimit: 0
+DerivePointerAlignment: false
 #EmptyLineAfterAccessModifier: Leave
 #EmptyLineBeforeAccessModifier: LogicalBlock
-ExperimentalAutoDetectBinPacking: 'true'
-FixNamespaceComments: 'false'
-IndentCaseLabels: 'true'
-IndentWidth: '4'
-KeepEmptyLinesAtTheStartOfBlocks: 'true'
-Language: Cpp
-MaxEmptyLinesToKeep: '10'
+ExperimentalAutoDetectBinPacking: true
+FixNamespaceComments: false
+IndentCaseLabels: true
+IndentWidth: 4
+KeepEmptyLinesAtTheStartOfBlocks: true
+MaxEmptyLinesToKeep: 10
 NamespaceIndentation: All
-PenaltyBreakComment: '20'
-PenaltyExcessCharacter: '5'
+PenaltyBreakComment: 20
+PenaltyExcessCharacter: 5
 PointerAlignment: Middle
-SortUsingDeclarations: 'false'
-SpaceAfterTemplateKeyword: 'false'
-SpaceBeforeCpp11BracedList: 'true'
-SpacesBeforeTrailingComments: '1'
+SortUsingDeclarations: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeCpp11BracedList: true
+SpacesBeforeTrailingComments: 1
 UseTab: Never
-
-...

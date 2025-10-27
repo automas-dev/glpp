@@ -108,16 +108,16 @@ int main() {
 
     const float iOffset[] = {
         -1.0, -1.0, //
-        0.0,  0.0, //
-        -1.0, 0.8, //
-        -0.8, 0.8, //
-        -0.6, 0.8, //
+        0.0, 0.0,   //
+        -1.0, 0.8,  //
+        -0.8, 0.8,  //
+        -0.6, 0.8,  //
     };
 
-    Buffer::Attribute a0 (0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
-    Buffer::Attribute a1 (1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
-    Buffer::Attribute a2 (2, 1, GL_FLOAT, GL_FALSE, 1 * sizeof(float), nullptr, 1);
-    Buffer::Attribute a3 (3, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr, 1);
+    Buffer::Attribute a0(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a1(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a2(2, 1, GL_FLOAT, GL_FALSE, 1 * sizeof(float), nullptr, 1);
+    Buffer::Attribute a3(3, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), nullptr, 1);
 
     BufferArray array(vector<vector<Buffer::Attribute>> {{a0}, {a1}, {a2}, {a3}});
     array.drawArrays(Buffer::LineStrip, 0, 4);
