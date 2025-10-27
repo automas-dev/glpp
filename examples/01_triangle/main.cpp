@@ -111,22 +111,22 @@ int main() {
 
     const float vertices[] = {
         -0.5f, -0.5f, 0.0f, // Bottom Left
-        0.5f,  -0.5f, 0.0f, // Bottom Right
-        0.0f,  0.5f,  0.0f // Top Center
+        0.5f, -0.5f, 0.0f,  // Bottom Right
+        0.0f, 0.5f, 0.0f    // Top Center
     };
 
     const float colors[] = {
         1.0, 0.0, 0.0, // Bottom Left
         0.0, 1.0, 0.0, // Bottom Right
-        0.0, 0.0, 1.0 // Top Center
+        0.0, 0.0, 1.0  // Top Center
     };
 
     const unsigned int indices[] = {
         0, 1, 2, // First Triangle
     };
 
-    Buffer::Attribute a0 (0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
-    Buffer::Attribute a1 (1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a0(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a1(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
 
     BufferArray array(vector<vector<Buffer::Attribute>> {{a0}, {a1}});
     array.bind();

@@ -108,16 +108,16 @@ int main() {
 
     const float vertices[] = {
         -0.5f, -0.5f, 0.0f, // Bottom Left
-        0.5f,  -0.5f, 0.0f, // Bottom Right
-        0.0f,  0.5f,  0.0f, // Top Center
+        0.5f, -0.5f, 0.0f,  // Bottom Right
+        0.0f, 0.5f, 0.0f,   // Top Center
 
-        0.0f,  -0.5f, 0.0f, //
-        1.0f,  -0.5f, 0.0f, //
-        1.0f,  -0.5f, 1.0f, //
+        0.0f, -0.5f, 0.0f, //
+        1.0f, -0.5f, 0.0f, //
+        1.0f, -0.5f, 1.0f, //
 
-        0.5f,  0.0f,  0.0f, //
-        0.5f,  1.0f,  0.0f, //
-        0.5f,  1.0f,  1.0f, //
+        0.5f, 0.0f, 0.0f, //
+        0.5f, 1.0f, 0.0f, //
+        0.5f, 1.0f, 1.0f, //
     };
 
     const float colors[] = {
@@ -134,8 +134,8 @@ int main() {
         0.0, 0.0, 1.0, // Top Center
     };
 
-    Buffer::Attribute a0 (0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
-    Buffer::Attribute a1 (1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a0(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a1(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
 
     BufferArray array(vector<vector<Buffer::Attribute>> {{a0}, {a1}});
     array.bind();

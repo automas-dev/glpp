@@ -1,7 +1,7 @@
 #pragma once
 
-#include <glm/glm.hpp>
 #include <glm/ext/quaternion_float.hpp>
+#include <glm/glm.hpp>
 
 namespace glpp::extra {
     /**

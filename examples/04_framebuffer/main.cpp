@@ -111,22 +111,22 @@ int main() {
 
     const float vertices[] = {
         -0.5f, -0.5f, 0.0f, // Bottom Left
-        0.5f,  -0.5f, 0.0f, // Bottom Right
-        0.0f,  0.5f,  0.0f // Top Center
+        0.5f, -0.5f, 0.0f,  // Bottom Right
+        0.0f, 0.5f, 0.0f    // Top Center
     };
 
     const float texCoords[] = {
         -0.5f, -0.5f, // Bottom Left
-        0.5f,  -0.5f, // Bottom Right
-        0.0f,  0.5f, // Top Center
+        0.5f, -0.5f,  // Bottom Right
+        0.0f, 0.5f,   // Top Center
     };
 
     const unsigned int indices[] = {
         0, 1, 2, // First Triangle
     };
 
-    Buffer::Attribute a0 (0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
-    Buffer::Attribute a1 (1, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float));
+    Buffer::Attribute a0(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float));
+    Buffer::Attribute a1(1, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float));
 
     BufferArray array(vector<vector<Buffer::Attribute>> {{a0}, {a1}});
     array.bind();
@@ -135,7 +135,7 @@ int main() {
     array.bufferElements(sizeof(indices), indices);
     array.unbind();
 
-    Quad quad ({0, 0}, {1, 1});
+    Quad quad({0, 0}, {1, 1});
 
     // Needed because FrameBuffer is storing size for future blit to default
     FrameBuffer::getDefault().resize(uvec2(width, height));
@@ -146,14 +146,14 @@ int main() {
     fbo.attach(rbo, GL_DEPTH_STENCIL_ATTACHMENT);
 
     Texture::Ptr tex2 = make_shared<Texture>(uvec2(width, height),
-                 Texture::RGBA,
-                 Texture::RGBA,
-                 GL_FLOAT,
-                 0,
-                 Texture::Linear,
-                 Texture::Linear,
-                 Texture::Clamp,
-                 false);
+                                             Texture::RGBA,
+                                             Texture::RGBA,
+                                             GL_FLOAT,
+                                             0,
+                                             Texture::Linear,
+                                             Texture::Linear,
+                                             Texture::Clamp,
+                                             false);
     fbo.attach(tex2, GL_COLOR_ATTACHMENT0);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {

@@ -38,11 +38,13 @@ namespace glpp::extra {
 }
 
 namespace glpp::extra {
-    static const vector<vector<Buffer::Attribute>> attrs {{
-        {0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0},
-        {1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)(3 * sizeof(float))},
-        {2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)(6 * sizeof(float))},
-    }};
+    static const vector<vector<Buffer::Attribute>> attrs {
+        {
+         {0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), 0},
+         {1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)(3 * sizeof(float))},
+         {2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void *)(6 * sizeof(float))},
+         }
+    };
 
     VertexBufferArray::VertexBufferArray() : BufferArray(attrs) {}
 
