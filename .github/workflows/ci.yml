@@ -1,0 +1,71 @@
+name: Lint & Test
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  # test:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - uses: actions/checkout@v4
+
+  #     - name: Install dependencies
+  #       run: sudo apt-get install -y build-essential gcc-multilib g++-multilib
+
+  #     - name: Install gcovr
+  #       run: pip install gcovr
+
+  #     - name: Setup project
+  #       run: cmake -S ${TEST_DIR} -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=Debug
+
+  #     - name: Build
+  #       run: cmake --build ${BUILD_DIR}
+
+  #     # - name: Test
+  #     #   working-directory: build
+  #     #   run: ctest -V
+
+  #     - name: Test with Coverage
+  #       working-directory: build
+  #       run: cmake --build ${BUILD_DIR} --target os_test_coverage
+
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        folder:
+          - src
+          - examples
+          - tests
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Lint ${{ matrix.folder }}
+        uses: jidicula/clang-format-action@v4.14.0
+        with:
+          clang-format-version: "20"
+          check-path: ${{ matrix.folder }}
+
+  increment_version:
+    name: Increment Version
+    uses: automas-dev/reusable-workflows/.github/workflows/increment_version.yml@main
+    if: github.ref == 'refs/heads/main'
+    secrets: inherit
+
+    needs:
+      # - test
+      - lint
+
+    permissions:
+      contents: write
