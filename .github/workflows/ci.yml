@@ -45,6 +45,7 @@ jobs:
       matrix:
         folder:
           - src
+          - include
           - examples
           - tests
 
