@@ -6,8 +6,8 @@
 #include "glpp/Buffer.hpp"
 
 namespace glpp::extra {
-    using std::vector;
     using std::shared_ptr;
+    using std::vector;
 
     /**
      * A single point in the format accepted by VBO, Mesh and Model.

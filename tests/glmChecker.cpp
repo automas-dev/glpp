@@ -4,9 +4,9 @@
 #include <glm/gtx/string_cast.hpp>
 #include <ostream>
 
-using glm::vec3;
-using glm::quat;
 using glm::mat4;
+using glm::quat;
+using glm::vec3;
 using std::ostream;
 
 // static ostream & operator<<(ostream & os, const quat & q) {

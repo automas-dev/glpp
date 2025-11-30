@@ -11,8 +11,8 @@
 #include "Texture.hpp"
 
 namespace glpp {
-    using std::vector;
     using std::shared_ptr;
+    using std::vector;
 
     class RenderBuffer {
     public:

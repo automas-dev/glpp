@@ -6,9 +6,9 @@
 #include "glTest.hpp"
 
 namespace {
-    using glm::vec3;
-    using glm::quat;
     using glm::mat4;
+    using glm::quat;
+    using glm::vec3;
 
     TEST(GLMTest, VecEqIsExpected) {
         vec3 a(1, 2, 3);

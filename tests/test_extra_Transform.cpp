@@ -12,10 +12,10 @@
 #include "glTest.hpp"
 
 namespace {
-    using glpp::extra::Transform;
-    using glm::vec3;
-    using glm::quat;
     using glm::mat4;
+    using glm::quat;
+    using glm::vec3;
+    using glpp::extra::Transform;
 
     /**
      * Empty constructor should have default position and rotation of 0 with

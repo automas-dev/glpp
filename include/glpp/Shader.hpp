@@ -13,9 +13,9 @@
 // https://www.khronos.org/opengl/wiki/Shader_Compilation
 
 namespace glpp {
+    using std::shared_ptr;
     using std::string;
     using std::string_view;
-    using std::shared_ptr;
 
     class ShaderCompileException : public std::runtime_error {
     public:
