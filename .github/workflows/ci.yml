@@ -25,10 +25,10 @@ jobs:
         run: pip install gcovr
 
       - name: Setup project
-        run: cmake -S ${TEST_DIR} -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=Debug
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
 
       - name: Build
-        run: cmake --build ${BUILD_DIR}
+        run: cmake --build build
 
       - name: Test
         working-directory: build
