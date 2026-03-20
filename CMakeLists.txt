@@ -6,10 +6,10 @@ project(glpp
     LANGUAGES CXX)
 
 set(GLPP_IS_MASTER_PROJECT OFF)
-if (${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
+if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
     set(GLPP_IS_MASTER_PROJECT ON)
 endif()
-    
+
 option(GLPP_BUILD_DOCS "Builds the glpp documentation" ${GLPP_IS_MASTER_PROJECT})
 option(GLPP_BUILD_EXAMPLES "Builds the glpp examples" ${GLPP_IS_MASTER_PROJECT})
 option(GLPP_BUILD_TESTS "Builds the glpp tests" ${GLPP_IS_MASTER_PROJECT})
@@ -43,7 +43,7 @@ endif()
 include(GNUInstallDirs)
 
 # Create config.h with project version numbers
-configure_File(cmake/config.h.in include/config.h)
+configure_file(cmake/config.h.in include/config.h)
 include_directories(PRIVATE ${CMAKE_BINARY_DIR}/include)
 
 find_package(OpenGL REQUIRED)

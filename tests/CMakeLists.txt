@@ -1,29 +1,22 @@
-set(TARGET tests)
+enable_testing()
+include(GoogleTest)
 
-macro(define_test name)
+file(GLOB_RECURSE SOURCE_LIST ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+file(GLOB_RECURSE HEADER_LIST ${CMAKE_CURRENT_SOURCE_DIR}/*.hpp)
 
-    set(SOURCE_LIST
-        glTest.cpp
-        glTest.hpp
-        glmChecker.cpp
-        glmChecker.hpp
-        test_${name}.cpp
-    )
-    list(TRANSFORM SOURCE_LIST PREPEND "${${PROJECT_NAME}_SOURCE_DIR}/tests/")
+foreach(TEST_SOURCE ${SOURCE_LIST})
+    cmake_path(GET TEST_SOURCE STEM test_name)
+    if(${test_name} MATCHES "^test_")
+        message("Generate test ${test_name}")
 
-    add_executable(${TARGET}_${name} ${SOURCE_LIST})
-    target_link_libraries(${TARGET}_${name} PRIVATE gtest gtest_main glpp glfw)
+        add_executable(${test_name} ${TEST_SOURCE} ${HEADER_LIST}
+            glTest.cpp
+            glTest.hpp
+            glmChecker.cpp
+            glmChecker.hpp)
+        target_link_libraries(${test_name} PRIVATE gtest gtest_main glpp glfw)
 
-    target_include_directories(${TARGET}_${name} PRIVATE "${${PROJECT_NAME}_SOURCE_DIR}/tests/")
+        gtest_discover_tests(${test_name})
+    endif()
+endforeach()
 
-    add_test(NAME ${TARGET}_${name} COMMAND ${TARGET}_${name})
-endmacro()
-
-define_test(shader)
-define_test(uniform)
-define_test(texture)
-define_test(vertex)
-define_test(quad)
-
-define_test(glm_compare)
-define_test(extra_Transform)

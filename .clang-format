@@ -40,7 +40,7 @@ NamespaceIndentation: All
 PenaltyBreakComment: 20
 PenaltyExcessCharacter: 5
 PointerAlignment: Middle
-SortUsingDeclarations: false
+SortUsingDeclarations: true
 SpaceAfterTemplateKeyword: false
 SpaceBeforeCpp11BracedList: true
 SpacesBeforeTrailingComments: 1

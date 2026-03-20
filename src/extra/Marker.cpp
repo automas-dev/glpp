@@ -1,8 +1,8 @@
 #include "glpp/extra/Marker.hpp"
 
 namespace glpp::extra {
-    using std::move;
     using std::make_shared;
+    using std::move;
 
     Mark::Mark(const vector<glm::vec3> & points, const glm::vec4 & color)
         : Transform(), line(make_shared<Line>(points, color, Line::Lines)) {}

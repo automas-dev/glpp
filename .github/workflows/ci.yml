@@ -12,6 +12,7 @@ on:
       - synchronize
 
 jobs:
+  # Tests disabled because ci doesn't have opengl, need to find a fix for that
   # test:
   #   runs-on: ubuntu-latest
 
@@ -25,18 +26,18 @@ jobs:
   #       run: pip install gcovr
 
   #     - name: Setup project
-  #       run: cmake -S ${TEST_DIR} -B ${BUILD_DIR} -DCMAKE_BUILD_TYPE=Debug
+  #       run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug
 
   #     - name: Build
-  #       run: cmake --build ${BUILD_DIR}
+  #       run: cmake --build build
 
-  #     # - name: Test
-  #     #   working-directory: build
-  #     #   run: ctest -V
-
-  #     - name: Test with Coverage
+  #     - name: Test
   #       working-directory: build
-  #       run: cmake --build ${BUILD_DIR} --target os_test_coverage
+  #       run: ctest -V
+
+  #     # - name: Test with Coverage
+  #     #   working-directory: build
+  #     #   run: cmake --build ${BUILD_DIR} --target os_test_coverage
 
   lint:
     runs-on: ubuntu-latest

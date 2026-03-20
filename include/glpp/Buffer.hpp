@@ -10,8 +10,8 @@
 #include <vector>
 
 namespace glpp {
-    using std::vector;
     using std::shared_ptr;
+    using std::vector;
 
     /**
      * A single array buffer.

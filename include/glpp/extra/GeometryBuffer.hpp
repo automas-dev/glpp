@@ -9,8 +9,8 @@
 #include "glpp/extra/Vertex.hpp"
 
 namespace glpp::extra {
-    using std::shared_ptr;
     using glm::uvec2;
+    using std::shared_ptr;
 
     class GeometryBuffer : public FrameBuffer {
     public:

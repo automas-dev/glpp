@@ -28,8 +28,8 @@ void main() {
     })
 
 namespace glpp::extra {
-    using std::vector;
     using std::make_shared;
+    using std::vector;
 
     void Line::updateBuffer() {
         vector<glm::vec3> vertices = points;

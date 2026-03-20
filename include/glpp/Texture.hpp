@@ -10,8 +10,8 @@
 #include <string>
 
 namespace glpp {
-    using std::string;
     using std::shared_ptr;
+    using std::string;
 
     class TextureLoadException : public std::runtime_error {
     public:

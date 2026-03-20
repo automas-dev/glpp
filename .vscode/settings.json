@@ -1,0 +1,4 @@
+{
+    "cmake.ctest.testSuiteDelimiter": "\\.",
+    "cmake.ctest.testExplorerIntegrationEnabled": true
+}

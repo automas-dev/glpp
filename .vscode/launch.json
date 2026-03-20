@@ -29,6 +29,17 @@
                     "ignoreFailures": true
                 }
             ]
+        },
+        // https://stackoverflow.com/a/76447033
+        {
+            "name": "(ctest) Launch",
+            "type": "cppdbg",
+            "cwd": "${cmake.testWorkingDirectory}",
+            "request": "launch",
+            "program": "${cmake.testProgram}",
+            "args": [
+                "${cmake.testArgs}"
+            ]
         }
     ]
 }

@@ -28,4 +28,7 @@ lint:
 format:
 	@find src include examples tests -name '*.c' -or -name '*.h' -or -name '*.cpp' -or -name '*.hpp' | xargs clang-format -i --Werror --sort-includes
 
-.PHONY: config build install lint format
+test:
+	cmake --build $(PWD)/build --target test
+
+.PHONY: config build install lint format test

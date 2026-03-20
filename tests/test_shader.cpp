@@ -135,8 +135,7 @@ namespace {
     }
 
     TEST_F(ShaderTest, defaultShader) {
-        // TODO: Why did this switch to 0 instead of > 0
-        EXPECT_EQ(shader.getProgram(), 0);
+        EXPECT_GT(shader.getProgram(), 0);
     }
 
     TEST_F(ShaderTest, fromFragmentSource) {
